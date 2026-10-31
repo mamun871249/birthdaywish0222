@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f6">
+  <title>A Little Surprise for You 💗</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+  <main>
+    <section class="screen active" id="welcome">
+      <div class="badge">A SPECIAL DAY ✨</div>
+      <div class="big-heart">💗</div>
+      <p class="eyebrow">Made with love & friendship</p>
+      <h1>Hey, Birthday Girl! 🎀</h1>
+      <p class="subtitle">
+        Someone has prepared a little surprise just for you.
+      </p>
+      <button class="primary" data-go="letter">
+        Open Your Surprise 💌
+      </button>
+      <p class="tiny">A little gift from your best friend</p>
+    </section>
+
+    <section class="screen" id="letter">
+      <p class="eyebrow">A LITTLE LETTER FOR YOU</p>
+      <h2>To My Favorite Person 💌</h2>
+      <button class="envelope" id="openLetter"
+        aria-label="Open your birthday letter">
+        <span class="envelope-icon">💌</span>
+        <span id="envelopeLabel">Tap to open your letter</span>
+      </button>
+      <article class="letter-card hidden" id="letterCard">
+        <p class="letter-text" id="letterText"></p>
+        <button class="primary" data-go="cake">
+          Next Surprise 🎂
+        </button>
+      </article>
+      <button class="text-button" data-go="welcome">← Back</button>
+    </section>
+
+    <section class="screen" id="cake">
+      <p class="eyebrow">YOUR SPECIAL MOMENT</p>
+      <h2>A Cake Just for You! 🎂</h2>
+      <div class="cake-scene" id="cakeScene">
+        <div class="candle-row">
+          <span class="candle"><i></i></span>
+          <span class="candle"><i></i></span>
+          <span class="candle"><i></i></span>
+        </div>
+        <div class="cake-top"></div>
+        <div class="cake-middle"></div>
+        <div class="cake-bottom"></div>
+        <div class="cake-plate"></div>
+      </div>
+      <p class="subtitle" id="cakeMessage">
+        Close your eyes, make a wish, and tap below! 🌸
+      </p>
+      <button class="primary" id="wishButton">
+        Make a Wish ✨
+      </button>
+      <button class="primary hidden" id="giftButton" data-go="gifts">
+        Find Your Gifts 🎁
+      </button>
+    </section>
+
+    <section class="screen" id="gifts">
+      <p class="eyebrow">THREE LITTLE SURPRISES</p>
+      <h2>Choose Your Gifts 🎁</h2>
+      <p class="subtitle">Tap every gift to discover your surprise.</p>
+      <div class="gift-grid">
+        <button class="gift" data-gift="0">
+          <span>🎁</span><small>Gift No. 1</small>
+        </button>
+        <button class="gift" data-gift="1">
+          <span>🎀</span><small>Gift No. 2</small>
+        </button>
+        <button class="gift" data-gift="2">
+          <span>💝</span><small>Gift No. 3</small>
+        </button>
+      </div>
+      <p class="gift-result hidden" id="giftResult" aria-live="polite"></p>
+      <button class="primary hidden" id="finalButton" data-go="final">
+        One Last Surprise 💗
+      </button>
+    </section>
+
+    <section class="screen" id="final">
+      <div class="final-stars">✨ 🌸 ✨</div>
+      <div class="big-heart">💕</div>
+      <p class="eyebrow">A MESSAGE FROM MY HEART</p>
+      <h1>You're Truly Special!</h1>
+      <div class="final-card">
+        <p>
+          Happy Birthday to my amazing best friend! 🥹💗
+          <br><br>
+          May your life be filled with endless happiness,
+          beautiful memories, success, and people who truly
+          care about you.
+          <br><br>
+          Thank you for being such a wonderful person.
+          Never stop smiling, never stop dreaming, and
+          always remember how special you are.
+          <br><br>
+          No matter where life takes us, I will always
+          wish the very best for you.
+          <br><br>
+          <strong>Happy Birthday, Bestie! 🎂🌷</strong>
+        </p>
+      </div>
+      <p class="signature">With lots of friendship & care 💗</p>
+      <button class="primary" id="replayButton">Watch Again ↻</button>
+    </section>
+  </main>
+
+  <footer>Made especially for you ♡</footer>
+
+  <div class="modal hidden" id="giftModal" role="dialog"
+       aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-emoji" id="modalEmoji">🎁</div>
+      <h2 id="modalTitle">Your Surprise!</h2>
+      <p id="modalMessage"></p>
+      <button class="primary" id="closeModal">Awww, Thank You 💗</button>
+    </div>
+  </div>
+
+  <div id="confetti" aria-hidden="true"></div>
+</body>
+</html>
